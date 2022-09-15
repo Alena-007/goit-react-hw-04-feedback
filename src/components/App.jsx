@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { GlobalStyle } from '../GlobalStyle';
+import { Box } from './Box';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
@@ -31,7 +33,7 @@ export class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     return (
-      <div>
+      <Box width="600px" ml="auto" mr="auto" mb={5} p={4}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
@@ -51,7 +53,8 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+        <GlobalStyle />
+      </Box>
     );
   }
 }

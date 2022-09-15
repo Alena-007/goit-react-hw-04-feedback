@@ -1,8 +1,9 @@
 import { Component } from 'react';
+import { NotificationMessage } from './Notification.styled';
 
 export class Notification extends Component {
   render() {
     const { message } = this.props;
-    return <p>{message}</p>;
+    return <NotificationMessage>{message}</NotificationMessage>;
   }
 }

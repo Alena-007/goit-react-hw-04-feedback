@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { FeedbackOptionsButton } from './FeedbackOptions.styled';
 
 export class FeedbackOptions extends Component {
   render() {
@@ -6,9 +7,13 @@ export class FeedbackOptions extends Component {
     return (
       <div>
         {options.map(option => (
-          <button key={option} name={option} onClick={onLeaveFeedback}>
+          <FeedbackOptionsButton
+            key={option}
+            name={option}
+            onClick={onLeaveFeedback}
+          >
             {option}
-          </button>
+          </FeedbackOptionsButton>
         ))}
       </div>
     );
