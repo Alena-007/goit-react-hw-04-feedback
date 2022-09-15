@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { FeedbackOptionsButton } from './FeedbackOptions.styled';
 
@@ -19,3 +20,13 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
+
+FeedbackOptionsButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
